@@ -47,7 +47,15 @@ shinyUI(
                                                  accept = c(".csv"),
                                                  multiple = FALSE)
                                      )
-                            )
+                            ),
+                            fluidRow(
+                              wellPanel(
+                                tags$ul(
+                                  tags$p("Please make sure that your column names are: Symbol, Quantity, Purchase Price, Purschase Date and Buy/Sell"),
+                                  tags$p("The Purchase date should be in yyyy-mm-dd format")
+                                )
+                              )
+                            )  
                     )
                     ),
                     # page to preview the data of uploaded csv file
